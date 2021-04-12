@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.web.assigment</groupId>
+    <artifactId>web-app</artifactId>
+    <version>1.0</version>
+    <name>web</name>
+    <packaging>war</packaging>
+
+
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <junit.version>5.7.0</junit.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.server.bom>19.0.0.Final</version.server.bom>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <jakartaee.version>8.0.0</jakartaee.version>
+        <wildfly.plugin.version>2.0.0.Final</wildfly.plugin.version>
+        <maven.compiler.version>3.8.0</maven.compiler.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ejb.assiment</groupId>
+            <artifactId>ejb</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>10.0.0-RC1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>web-app</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
